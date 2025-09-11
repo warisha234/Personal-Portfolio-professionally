@@ -3,7 +3,7 @@ function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("active");
 }
 // typing effect k liye
-const roles = ["Web Developer", "Video Editor", "Calligrapher"];
+const roles = ["Front-end Developer", "Back-end Developer", "Full-stack Developer"];
 let roleIndex = 0;
 
 function showRole() {
