@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="header-wrapper">
+    <nav class="navbar">
+      <div class="logo">My Portfolio</div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificate">Certificates</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div class="left">
+        <h1>Hi, I’m Warisha Turab</h1>
+        <h2 id="role" class="typing"></h2>
+        <button id="resume-btn">
+          <a href="/resume.html">View Resume</a>
+        </button>
+      </div>
+
+      <div class="right">
+        <img src="images/portfolio dp.jpeg" alt="dp">
+      </div>
+    </section>
+  </div>
+
+  <!-- About Section -->
+  <div class="about-section">
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="images/portfolio dp.jpeg" alt="">
+      <p>
+        Hi, I’m Warisha Turab, a passionate learner and aspiring Web Developer with strong skills in HTML, CSS,
+        JavaScript, TypeScript, and Next.js.
+        <span id="moreText" style="display: none">
+          I enjoy building beautiful, responsive, and user-friendly websites.
+          Apart from web development, I’m interested in UI/UX design, calligraphy, Urdu writing, and mathematics. I
+          believe in continuous learning and always look forward to improving myself both professionally and personally.
+        </span>
+      </p>
+      <button onclick="readMore()" id="readmore">Read More</button>
+    </section>
+  </div>
+
+  <!-- projects -->
+  <div class="projects-section" id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="images/projects/project1.png" alt="Project 1">
+        <h3>Blog Website</h3>
+        <p>A simple responsive blog website built using Html Next-js, focusing on clean design and readability.</p>
+        <a href="https://blog-assignment-nextjs-2lfq.vercel.app/" target="_blank" class="btn">View Project</a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="images/projects/project2.png" alt="Project 2">
+        <h3>Cyber Iphone website</h3>
+        <p>An interactive project styled like an iPhone interface using Next-js.</p>
+        <a href="https://cyber-figma-website.vercel.app/" target="_blank" class="btn">View Project</a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="images/projects/project3.png" alt="Project 3">
+        <h3>Simple Portfolio Website</h3>
+        <p>A portfolio showcasing personal details and skills with a beautiful and responsive layout.</p>
+        <a href="https://portfolio-using-tailwind-two.vercel.app/" target="_blank" class="btn">View Project</a>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <img src="images/projects/project4.png" alt="Project 4">
+        <h3>Resume Builder</h3>
+        <p>A dynamic resume generator built using HTML, CSS,Typescript and JavaScript, allowing users to create and
+          download resumes.</p>
+        <a href="https://mileston5-tau.vercel.app/" target="_blank" class="btn">View Project</a>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card">
+        <img src="images/projects/project5.png" alt="Project 5">
+        <h3>Sign-In Form</h3>
+        <p>An Sign-In UI built with HTML & CSS, designed with a minimal and modern look.</p>
+        <a href="https://warisha234.github.io/sign-in-page/" target="_blank" class="btn">View Project</a>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card">
+        <img src="images/projects/project6.png" alt="Project 6">
+        <h3>Nike Website Clone</h3>
+        <p>A Nike landing page clone created to practice layout, responsiveness, and e-commerce styling.</p>
+        <a href="https://6756ff3ec335dd7a05d215d9--lambent-sunflower-b6769f.netlify.app/" target="_blank"
+          class="btn">View Project</a>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="project-card">
+        <img src="images/projects/project7.png" alt="Project 7">
+        <h3>Rock Paper Scissor</h3>
+        <p>A fun Rock-Paper-Scissors game built with JavaScript and styled for smooth user interaction.</p>
+        <a href="https://warisha234.github.io/Javascript-projects-Smit/Task%203%20rock%20paper%20scissor/index.html"
+          target="_blank" class="btn">View Project</a>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="project-card">
+        <img src="images/projects/project8.png" alt="Project 8">
+        <h3>Stop Watch</h3>
+        <p>A fully functional Stopwatch app built using JavaScript and styled with CSS.</p>
+        <a href="https://warisha234.github.io/Javascript-projects-Smit/Task%202%20stop%20watch/index.html"
+          target="_blank" class="btn">View Project</a>
+      </div>
+
+      <!-- Project 9 -->
+      <div class="project-card">
+        <img src="images/projects/project9.png" alt="Project 9">
+        <h3>Counter App</h3>
+        <p>A simple yet interactive counter application using JavaScript, demonstrating DOM manipulation.</p>
+        <a href="https://warisha234.github.io/Javascript-projects-Smit/Task%206%20Count%20Counter/index.html"
+          target="_blank" class="btn">View Project</a>
+      </div>
+
+      <!-- Project 10 -->
+      <div class="project-card">
+        <img src="images/projects/project10.png" alt="Project 10">
+        <h3>Random Quotes Generator</h3>
+        <p>A project that generates random quotes dynamically with hover effects and fullscreen view.</p>
+        <a href="https://warisha234.github.io/Javascript-projects-Smit/Task%204%20Randam%20Qoutes%20generator/index.html"
+          target="_blank" class="btn">View Project</a>
+      </div>
+
+      <!-- Project 11 -->
+      <div class="project-card">
+        <img src="images/projects/project11.png" alt="Project 11">
+        <h3>Travel Website</h3>
+        <p>A travel booking and landing website built with HTML & CSS, featuring services, destinations, and responsive
+          sections.</p>
+        <a href="https://warisha234.github.io/hackathon-saylani-classwork/" target="_blank" class="btn">View Project</a>
+      </div>
+
+      <!-- Project 12 -->
+      <div class="project-card">
+        <img src="images/projects/project12.png" alt="Project 12">
+        <h3>Figma Template Clone</h3>
+        <p>A Next.js project replicating a Figma template design to practice UI development and responsiveness.</p>
+        <a href="https://warisha234.github.io/saylani-html-css-hackathon-2k25/" target="_blank" class="btn">View
+          Project</a>
+      </div>
+
+    </div>
+  </div>
+
+  <section id="certificates" class="certificates-section">
+    <h2>My Certificates</h2>
+
+    <div class="certificates-container">
+
+      <!-- Certificate 1 -->
+      <div class="certificate-card" id="certificate">
+        <img src="images/certificate/certificate1.jpeg" alt="Web Development Certificate">
+        <h3>Web Development Hackathon</h3>
+        <p>Certificate for outstanding participation and project development in a Web Development Hackathon.</p>
+      </div>
+
+      <!-- Certificate 2 -->
+      <div class="certificate-card offset">
+        <img src="images/certificate/certificate2.jpeg" alt="Next.js Bootcamp Certificate">
+        <h3>Calligraphy</h3>
+        <p>Acknowledged for creativity and excellence in Calligraphy skills.</p>
+      </div>
+
+      <!-- Certificate 3 -->
+      <div class="certificate-card">
+        <img src="images/certificate/Certificates3.jpeg" alt="Python Programming Certificate">
+        <h3>Typescript assessment</h3>
+        <p>Recognized for successfully completing a comprehensive TypeScript assessment..</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- skills -->
+  <section class="skills-section" id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <span>HTML</span>
+        <div class="progress-bar">
+          <div class="progress" data-width="99%">99%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>CSS</span>
+        <div class="progress-bar">
+          <div class="progress" data-width="90%">90%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress-bar">
+          <div class="progress" data-width="85%">85%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>TypeScript</span>
+        <div class="progress-bar">
+          <div class="progress" data-width="70%">70%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>Bootstrap</span>
+        <div class="progress-bar">
+          <div class="progress" data-width="100%">100%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>Next.js</span>
+        <div class="progress-bar">
+          <div class="progress" data-width="50%">50%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>Python</span>
+        <div class="progress-bar">
+          <div class="progress" data-width="80%">80%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>Tailwind CSS</span>
+        <div class="progress-bar">
+          <div class="progress" data-width="70%">70%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- experience -->
+
+<section id="experience">
+  <h2>My Experience</h2>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h3>2023 - Present</h3>
+        <p>Web Development Intern at CodeAlpha – Worked on real-world projects including portfolio and resume generators.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h3>2022 - 2023</h3>
+        <p>Teaching Experience – Taught at Al Farooq Secondary School, focusing on student learning and creativity.</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h3>2021 - 2022</h3>
+        <p>Started learning Programming Languages – Built small projects in HTML, CSS, JavaScript, and TypeScript.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services-section">
+  <h2>My Services</h2>
+  <div class="services-container">
+
+    <div class="service-box">
+      <i class="fas fa-code"></i>
+      <h3>Web Development</h3>
+      <p>I build modern, responsive, and user-friendly websites using HTML, CSS, JavaScript, TypeScript, and Next.js.</p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-pencil-ruler"></i>
+      <h3>UI / UX Design</h3>
+      <p>Designing intuitive, attractive, and user-focused interfaces that enhance the digital experience.</p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Responsive Design</h3>
+      <p>Creating mobile-friendly layouts ensuring a seamless experience across all devices.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- testimonials -->
+
+<section class="testimonials" id="testimonials">
+  <h2>Testimonials</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-card active">
+      <img src="images/clients/client1.webp" alt="Client 1">
+      <p>"Warisha is a highly creative developer with an eye for detail. Her work exceeded my expectations!"</p>
+      <h4>- Aliha Ahmed</h4>
+      <span>UI Designer @ Aptech Institute</span>
+    </div>
+    <div class="testimonial-card">
+      <img src="images/clients/client2.jpeg" alt="Client 2">
+      <p>"Working with Warisha was a pleasure. She delivered my project on time with great professionalism."</p>
+      <h4>- Any Ozberk</h4>
+      <span>Frontend Mentor</span>
+    </div>
+    <div class="testimonial-card">
+      <img src="images/clients/client3.webp" alt="Client 3">
+      <p>"Her ability to turn ideas into beautiful websites is impressive. I’d love to work with her again!"</p>
+      <h4>- Jawed Koz</h4>
+      <span>Project Manager @ TechWorld</span>
+    </div>
+  </div>
+
+  <div class="testimonial-nav">
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+  </div>
+</section>
+
+
+
+  <!-- contact me -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="status"></p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-profile">
+        <img src="images/portfolio dp.jpeg" alt="Warisha Turab" class="footer-dp">
+        <h3>Warisha Turab</h3>
+        <p>Aspiring Web Developer | Next.js Enthusiast</p>
+      </div>
+
+      <div class="footer-socials">
+        <h4>Connect with me</h4>
+        <div class="social-icons">
+          <a href="https://github.com/warisha234" target="_blank" class="github"></a>
+          <a href="https://www.linkedin.com/in/warisha-turab-8666b82b6/" target="_blank" class="linkedin"></a>
+          <a href="https://www.instagram.com/warishaturab?igsh=cTd6b3FoeWQ0djI3" target="_blank" class="instagram"></a>
+          <a href="https://www.facebook.com/warisha.talpur" target="_blank" class="facebook"></a>
+        </div>
+
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificate">Certificates</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Warisha Turab | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  
+</body>
+
+</html>
