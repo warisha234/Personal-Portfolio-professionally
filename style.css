@@ -388,6 +388,30 @@ h2 {
     transform: translateX(0);
   }
 }
+/* About section initial state */
+#about {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-in-out;
+}
+
+/* Jab section visible ho */
+#about.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: image animation */
+#about img {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s ease-in-out;
+}
+
+#about.show img {
+  opacity: 1;
+  transform: scale(1);
+}
 
 
 

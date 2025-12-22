@@ -1,72 +1,178 @@
-body {
-  font-family: 'Poppins', sans-serif;
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  background: #0a192f;
-  color: #fff;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Page background */
+body {
+  background: radial-gradient(circle at top, #0a1020, #020617);
+  padding: 40px 0;
+  color: #e5e7eb;
+}
+
+/* Resume container */
 .resume {
-  max-width: 900px;
-  margin: 50px auto;
+  width: 900px;
+  max-width: 95%;
+  margin: auto;
+  background: linear-gradient(180deg, #020617, #020617);
+  border-radius: 16px;
+  box-shadow:
+    0 0 25px rgba(59, 130, 246, 0.25),
+    0 0 60px rgba(59, 130, 246, 0.15);
+  overflow: hidden;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Header */
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 40px;
-  background: #112240;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(100, 255, 218, 0.4);
+  background: linear-gradient(135deg, #020617, #020617);
+  color: #e5e7eb;
+  box-shadow: inset 0 -1px 0 rgba(59, 130, 246, 0.4);
 }
 
-header {
-  text-align: center;
-  margin-bottom: 40px;
+/* Header text */
+.header-text h1 {
+  font-size: 2.6rem;
+  margin-bottom: 8px;
+  color: #e5f0ff;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
 }
 
-header h1 {
-  font-size: 2.5rem;
- color: #fff; 
-  text-shadow: 0 10px 8px #234b86, 10px 0 20px #657183 ; 
+.header-text .title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #93c5fd;
 }
 
-header p {
-  margin: 5px 0;
-  font-size: 1rem;
-  color: #d1d5db;
+.header-text p {
+  font-size: 0.95rem;
+  color: #c7d2fe;
 }
 
+/* Profile image */
+.header-image img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #3b82f6;
+  box-shadow:
+    0 0 20px rgba(59, 130, 246, 0.8),
+    0 0 50px rgba(59, 130, 246, 0.4);
+}
+
+/* Main content */
+main {
+  padding: 40px;
+}
+
+/* Section */
 .section {
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
+/* Section heading */
 .section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-   color: #fff; 
-  text-shadow: 0 10px 8px #234b86, 10px 0 20px #657183 ; 
-  border-bottom: 2px solid #234b86;
-  display: inline-block;
-  padding-bottom: 5px;
+  font-size: 1.4rem;
+  color: #e5f0ff;
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 16px;
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
 }
 
+.section h2::before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #3b82f6, #60a5fa);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
+}
+
+/* Lists */
 .section ul {
   list-style: none;
-  padding: 0;
 }
 
 .section ul li {
-  margin-bottom: 8px;
-  color: #e5e7eb;
+  font-size: 0.95rem;
+  color: #c7d2fe;
+  line-height: 1.9;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 6px;
 }
 
+.section ul li::before {
+  content: "▹";
+  color: #60a5fa;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-shadow: 0 0 6px rgba(96, 165, 250, 0.9);
+}
+
+/* Experience text */
 .section p {
-  color: #e5e7eb;
-  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #c7d2fe;
+  line-height: 1.9;
+  margin-bottom: 8px;
 }
 
+/* Skills highlight */
+.skills li {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #e5f0ff;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.25);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .resume {
-    padding: 20px;
-    margin: 20px;
+  .resume-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
   }
-  header h1 {
-    font-size: 2rem;
+
+  main {
+    padding: 30px 20px;
+  }
+
+  .header-image img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Print (auto light for PDF) */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .resume {
+    box-shadow: none;
+    border: none;
+    background: white;
   }
 }

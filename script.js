@@ -18,6 +18,26 @@ function showRole() {
 }
 showRole();
 setInterval(showRole, 2000);
+// about 
+
+  const aboutSection = document.querySelector("#about");
+
+  const aboutobserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          aboutSection.classList.add("show");
+        }
+      });
+    },
+    {
+      threshold: 0.3, 
+    }
+  );
+
+  aboutobserver.observe(aboutSection);
+
+
 
 // paragraph ko read more k liye
 function readMore() {
@@ -108,31 +128,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// testimonials slider k liye
-  let index = 0;
-  const testimonials = document.querySelectorAll(".testimonial-card");
-  const total = testimonials.length;
-
-  function showTestimonial(i) {
-    testimonials.forEach((t, idx) => {
-      t.classList.remove("active");
-      if (idx === i) t.classList.add("active");
-    });
-  }
-
-  document.querySelector(".next").addEventListener("click", () => {
-    index = (index + 1) % total;
-    showTestimonial(index);
-  });
-
-  document.querySelector(".prev").addEventListener("click", () => {
-    index = (index - 1 + total) % total;
-    showTestimonial(index);
-  });
-
-
-  setInterval(() => {
-    index = (index + 1) % total;
-    showTestimonial(index);
-  }, 5000);
 
