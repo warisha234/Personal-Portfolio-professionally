@@ -1,3 +1,20 @@
+window.addEventListener('DOMContentLoaded', () => {
+  const intro = document.getElementById('intro');
+
+  // Doors open after 0.5s
+  setTimeout(() => {
+    intro.classList.add('open');
+  }, 1000);
+
+  // Intro fades out after 3s (doors + text animation)
+  setTimeout(() => {
+    intro.classList.add('fade-out');
+  }, 3000);
+});
+
+
+
+
 // hamburger k liye
 function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("active");
