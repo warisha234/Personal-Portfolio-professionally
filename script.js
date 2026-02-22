@@ -163,24 +163,85 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
- const form = document.getElementById("contact-form");
+  // Custom Cursor Glow Effect
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault(); // page reload ko rokte hain
+const cursor = document.querySelector(".cursor");
+const dot = document.querySelector(".cursor-dot");
 
-    // SweetAlert popup
-    Swal.fire({
-      icon: 'success',
-      title: 'Message Sent!',
-      text: 'Your message has been submitted successfully.',
-      showConfirmButton: true,
-      confirmButtonText: 'OK',
-      background: '#03102e',
-      color: '#fff',
-    });
+let mouseX = 0;
+let mouseY = 0;
 
-    form.reset(); // form clear ho jaye
-  });
+let posX = 0;
+let posY = 0;
+
+/* SMOOTH EASING MOVEMENT */
+document.addEventListener("mousemove", e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+
+  dot.style.left = mouseX + "px";
+  dot.style.top = mouseY + "px";
+});
+
+function animate(){
+  posX += (mouseX - posX) * 0.1;
+  posY += (mouseY - posY) * 0.1;
+
+  cursor.style.left = posX + "px";
+  cursor.style.top = posY + "px";
+
+  requestAnimationFrame(animate);
+}
+
+animate();
 
 
-  
+// chat bot
+function toggleChat() {
+  const chat = document.getElementById("chatbot");
+  chat.style.display = chat.style.display === "flex" ? "none" : "flex";
+}
+
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const message = input.value.trim();
+  if (!message) return;
+
+  const chatBody = document.getElementById("chatBody");
+
+  // User Message
+  const userMsg = document.createElement("div");
+  userMsg.className = "user-msg";
+  userMsg.textContent = message;
+  chatBody.appendChild(userMsg);
+
+  input.value = "";
+
+  setTimeout(() => {
+    const botMsg = document.createElement("div");
+    botMsg.className = "bot-msg";
+
+    botMsg.textContent = getBotReply(message);
+    chatBody.appendChild(botMsg);
+
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }, 500);
+}
+
+function getBotReply(message) {
+  message = message.toLowerCase();
+
+  if (message.includes("hire") || message.includes("work")) {
+    return "Great! You can contact warisha via LinkedIn or Email. LinkedIn id Name is Warisha Turab. Email : warishaturab@gmail.com";
+  }
+
+  if (message.includes("price") || message.includes("cost")) {
+    return "Pricing depends on project scope. Please share your requirements.";
+  }
+
+  if (message.includes("skills")) {
+    return "Warisha specializes in Full Stack Development using React, Next.js, Node.js and UI/UX.";
+  }
+
+  return "Thanks for your message! Warisha will respond soon.";
+}

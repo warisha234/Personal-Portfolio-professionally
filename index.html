@@ -11,6 +11,9 @@
 </head>
 
 <body>
+<!-- cursor -->
+      <div class="cursor"></div>
+<div class="cursor-dot"></div>
 <!-- INTRO SCREEN -->
 <div class="intro" id="intro">
   <div class="door left">
@@ -71,28 +74,97 @@
       </div>
 
       <div class="right">
-        <img src="images/Gemini_Generated_Image_ybagjyybagjyybag-removebg-preview.png" alt="dp">
+        <img src="images/Dark Simple Fashion Collection Promo Poster (1).png" alt="dp">
       </div>
     </section>
   </div>
 
+  <!-- CHATBOT -->
+<div class="chatbot-toggle" onclick="toggleChat()">
+💬
+</div>
+
+<div class="chatbot-container" id="chatbot">
+
+  <div class="chatbot-header">
+    Warisha Portfolio Assistant
+    <span onclick="toggleChat()">✖</span>
+  </div>
+
+  <div class="chatbot-body" id="chatBody">
+    <div class="bot-msg">
+      👋 Hi! I'm Warisha's assistant. How can I help you?
+    </div>
+  </div>
+
+  <div class="chatbot-footer">
+    <input type="text" id="userInput" placeholder="Type your message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+</div>
+
   <!-- About Section -->
-  <div class="about-section">
+   <!-- About Section -->
+<div class="about-section">
+  <section id="about">
+    <div class="about-container">
+
+      <!-- Left: Image -->
+      <div class="about-image">
+        <img src="images/about.jpg" alt="Warisha Turab">
+      </div>
+
+      <!-- Right: Content -->
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          Hi, I’m <strong>Warisha Turab</strong>, a professional Full Stack Developer specializing in 
+          <strong>React, Node.js, and Next.js</strong>.
+          <span id="moreText" style="display: none;">
+            I build responsive, accessible, and visually engaging websites that deliver excellent user experiences. 
+            My passion extends to <strong>UI/UX design</strong>, calligraphy, Urdu writing, and mathematics. 
+            I am dedicated to continuous learning and professional growth, consistently refining my skills to stay at the forefront of web development.
+          </span>
+        </p>
+        <button onclick="readMore()" id="readmore">Read More</button>
+
+        <!-- Stats -->
+        <div class="about-stats">
+          <div class="stat">
+            <h3>2+</h3>
+            <p>Years of Experience</p>
+          </div>
+          <div class="stat">
+            <h3>30+</h3>
+            <p>Clients Worked With</p>
+          </div>
+          <div class="stat">
+            <h3>50+</h3>
+            <p>Projects Completed</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+  <!-- <div class="about-section">
     <section id="about">
       <h2>About Me</h2>
-      <img src="images/Gemini_Generated_Image_ybagjyybagjyybag-removebg-preview.png" alt="">
-      <p>
-        Hi, I’m Warisha Turab, a passionate learner and aspiring Web Developer with strong skills in HTML, CSS,
-        JavaScript, TypeScript, and Next.js.
-        <span id="moreText" style="display: none">
-          I enjoy building beautiful, responsive, and user-friendly websites.
-          Apart from web development, I’m interested in UI/UX design, calligraphy, Urdu writing, and mathematics. I
-          believe in continuous learning and always look forward to improving myself both professionally and personally.
-        </span>
-      </p>
+      <img src="images/Dark Simple Fashion Collection Promo Poster (1).png" alt="">
+       <p>
+  Hi, I’m <strong>Warisha Turab</strong>, a professional Full stack developer specializing in 
+  <strong>React, Node.js, and Next.js</strong>. 
+  <span id="moreText" style="display: none;">
+    I create responsive, accessible, and visually engaging websites that deliver excellent user experiences. 
+    Beyond development, I have a keen interest in <strong>UI/UX design</strong>, calligraphy, Urdu writing, and mathematics. 
+    I am committed to continuous learning and professional growth, consistently refining my skills to stay at the forefront of web development.
+  </span>
+</p>
       <button onclick="readMore()" id="readmore">Read More</button>
     </section>
-  </div>
+  </div> -->
 
   <!-- projects -->
   <div class="projects-section" id="projects">
@@ -359,21 +431,36 @@
 
 
   <!-- contact me -->
-  <section id="contact" class="contact-section">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="status"></p>
-  </section>
+   <section class="get-in-touch" id="contact">
+  <div class="contact-container">
+
+    <h2 class="contact-heading">Get in Touch</h2>
+    <p class="contact-text">
+      I'm always open to discuss your project or collaboration. Connect with me through social media or send me a message!
+    </p>
+
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/warisha-turab-8666b82b6" target="_blank" class="contact-icon github">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/warisha234" target="_blank" class="contact-icon github">
+        <img src="images/git.png" alt="GitHub">
+      </a>
+      <a href="mailto:warishaturab@gmail.com" class="contact-icon github">
+        <img src="images/mail.jpg" alt="Email">
+      </a>
+    </div>
+
+    <a href="mailto:warishaturab@gmail.com" target="_blank" class="contact-btn-main">Contact Me</a>
+
+  </div>
+</section>
+ 
 
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-profile">
-        <img src="images/Gemini_Generated_Image_ybagjyybagjyybag-removebg-preview.png" alt="Warisha Turab" class="footer-dp">
+        <img src="images/Dark Simple Fashion Collection Promo Poster (1).png" alt="Warisha Turab" class="footer-dp">
         <h3>Warisha Turab</h3>
         <p>Aspiring Web Developer | Next.js Enthusiast</p>
       </div>
