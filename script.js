@@ -37,7 +37,7 @@ function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("active");
 }
 // typing effect k liye
-const roles = ["Front-end Developer", "Back-end Developer", "Full-stack Developer"];
+const roles = ["Strategic Designer", "LinkedIn Profile Optimizer", "Full-stack Developer", "Brand Designer"];
 let roleIndex = 0;
 
 function showRole() {
