@@ -544,7 +544,7 @@
 
 .nav-links a:hover {
   transform: scale(1.1);
-  border-bottom: #fff 4px solid;
+  border-bottom: #00ffff 4px solid;
 }
 
 /* Hamburger */
@@ -567,6 +567,18 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* CROSS ANIMATION */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
 /* Home Section */
 
 
@@ -583,12 +595,59 @@
 }
 
 /* Left Content */
+/* Left Content (UPDATED PREMIUM BOX) */
 #home .left {
   flex: 1;
   opacity: 0;
   transform: translateX(-50px);
   animation: fadeInLeft 1s ease forwards;
+
+  /* PREMIUM BOX LOOK */
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.08);
+
+  position: relative;
+  overflow: hidden;
 }
+
+/* glowing soft effect */
+#home .left::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,255,255,0.08), transparent 60%);
+  animation: glowMove 8s linear infinite;
+  z-index: 0;
+}
+
+/* text always above effect */
+#home .left h1,
+#home .left h2,
+#home .left button {
+  position: relative;
+  z-index: 2;
+}
+
+/* animation (agar already nahi hai to add kar lena) */
+@keyframes glowMove {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* #home .left {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1s ease forwards;
+} */
 
 #home .left h1 {
   font-size: 3.5rem;
@@ -604,7 +663,8 @@ h2 {
 
 .typing {
   font-size: 2.5rem;
-  color: #fff;
+  color: #00ffff;
+  font-style: italic;
   text-shadow: 0 0 8px #234b86, 0 0 20px #657183; 
   border-right: 3px solid #fff;
   white-space: nowrap;
@@ -626,7 +686,7 @@ h2 {
 #resume-btn {
   color: #fff;
   background: #03101A;
-  border: 2px solid #fff;
+  border: 2px solid #00ffff;
   padding: 10px 25px;
   border-radius: 30px;
   text-decoration: none;
@@ -736,7 +796,7 @@ h2 {
     width: 220px;
     padding: 25px 0;
     border-radius: 0 8px 8px 0; 
-    box-shadow: #fff 0 0 15px, #fff 0 0 30px;
+    box-shadow: #fff 0 0 15px, #00ffff 0 0 30px;
     background-color: #03101A;
   }
 
@@ -1552,139 +1612,129 @@ text-shadow: 0 0 10px #fff, 0 10px 25px #234b86;
 
 
 /* get in touch */
-/* ===== Get in Touch Section ===== */
+/* CONTACT SECTION BACKGROUND */
 .get-in-touch {
-  background-color: #030A14; /* dark background */
-  color: #fff;
-  padding: 80px 20px;
+  background: #030A14;
+  padding: 100px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  position: relative; /* pseudo-element ke liye */
+}
+
+/* MAIN CARD BOX */
+.contact-container {
+  max-width: 850px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+
+  /* premium glass box */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 60px 40px;
+
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.08);
+  position: relative;
   overflow: hidden;
 }
 
-/* Neon Grid Background */
-.get-in-touch::before {
+/* glowing top effect */
+.contact-container::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(to right, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 80px 80px;
-  z-index: 0;
-  pointer-events: none;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,255,255,0.08), transparent 60%);
+  animation: glowMove 6s linear infinite;
 }
 
-/* Container Content */
-.contact-container {
-  position: relative; /* grid ke upar */
-  z-index: 1;
-  max-width: 800px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+@keyframes glowMove {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* Heading */
+/* heading */
 .contact-heading {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 42px;
+  font-weight: 700;
   color: #00ffff;
-  text-shadow: 0 0 10px #00ffff, 0 0 25px #234b86;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
 }
 
-/* Text */
+/* text */
 .contact-text {
-  font-size: 1.1rem;
-  color: #e0e0e0;
-  line-height: 1.8;
-  max-width: 650px;
-  margin: 0 auto;
+  font-size: 16px;
+  color: #b8c2cc;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 2;
 }
 
-/* Contact Links */
+/* icons wrapper */
 .contact-links {
   display: flex;
   justify-content: center;
   gap: 25px;
-  margin: 20px 0;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
 }
 
+/* ICON CARD STYLE */
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 255, 255, 0.06);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 15px; /* square premium look */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* icon image */
 .contact-icon img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px #00ffff, 0 0 25px #234b86;
+  width: 28px;
+  height: 28px;
 }
 
-.contact-icon img:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 20px #00ffff, 0 0 40px #234b86;
+/* hover effect */
+.contact-icon:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 20px #00ffff;
+  background: rgba(0, 255, 255, 0.15);
 }
 
-/* Contact Button */
+/* BUTTON */
 .contact-btn-main {
   display: inline-block;
-  background-color: #03101A;
-  color: #00ffff;
-  border: 2px solid #00ffff;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-decoration: none;
-  box-shadow: 0 0 15px #00ffff, 0 0 35px #234b86;
-  transition: all 0.3s ease-in-out;
-}
-
-.contact-btn-main:hover {
-  background-color: #00ffff;
+  padding: 14px 35px;
+  background: linear-gradient(135deg, #00ffff, #00c2ff);
   color: #030A14;
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #00ffff, 0 0 50px #234b86;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  position: relative;
+  z-index: 2;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .contact-heading {
-    font-size: 2.5rem;
-  }
-  .contact-text {
-    font-size: 1rem;
-    padding: 0 15px;
-  }
-  .contact-icon img {
-    width: 45px;
-    height: 45px;
-  }
-  .contact-btn-main {
-    padding: 10px 25px;
-    font-size: 1rem;
-  }
+/* button hover */
+.contact-btn-main:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px #00ffff;
 }
-
-@media (max-width: 480px) {
-  .contact-heading {
-    font-size: 2rem;
-  }
-  .contact-text {
-    font-size: 0.95rem;
-  }
-  .contact-icon img {
-    width: 40px;
-    height: 40px;
-  }
-  .contact-btn-main {
-    padding: 8px 20px;
-    font-size: 0.95rem;
-  }
-}
-
 /* footer */
 .footer {
   background-color: #030A14;

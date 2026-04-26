@@ -15,27 +15,32 @@ window.addEventListener('DOMContentLoaded', () => {
   const backToTopButton = document.getElementById("backToTop");
 
   // Show button after scrolling 200px
-  window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      backToTopButton.style.display = "block";
-    } else {
-      backToTopButton.style.display = "none";
-    }
-  };
+  // window.onscroll = function() {
+  //   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+  //     backToTopButton.style.display = "block";
+  //   } else {
+  //     backToTopButton.style.display = "none";
+  //   }
+  // };
 
   // Scroll to top on click
-  backToTopButton.addEventListener("click", function() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth" // smooth scroll
-    });
-  });
+  // backToTopButton.addEventListener("click", function() {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth"
+  //   });
+  // });
 
 
 // hamburger k liye
 function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
+  const nav = document.getElementById("navLinks");
+  const hamburger = document.querySelector(".hamburger");
+
+  nav.classList.toggle("active");
+  hamburger.classList.toggle("open"); // ⭐ ye add karo
 }
+
 // typing effect k liye
 const roles = ["Strategic Designer", "LinkedIn Profile Optimizer", "Full-stack Developer", "Brand Designer"];
 let roleIndex = 0;
