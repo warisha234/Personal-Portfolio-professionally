@@ -11,9 +11,35 @@
 </head>
 
 <body>
+<!-- ================= LIVING BACKGROUND (new — pure CSS, no JS) ================= -->
+<div class="bg-scene" aria-hidden="true">
+  <div class="bg-aurora bg-aurora-1"></div>
+  <div class="bg-aurora bg-aurora-2"></div>
+  <div class="bg-aurora bg-aurora-3"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-sparks">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+</div>
+<!-- ================================================================ -->
+
 <!-- cursor -->
       <div class="cursor"></div>
 <div class="cursor-dot"></div>
+
+<!-- ================= SCROLL PROGRESS RULER (new — left side rail + pearl) ================= -->
+<div class="scroll-ruler" aria-hidden="true">
+  <span class="ruler-label">SCROLL</span>
+  <div class="ruler-track">
+    <div class="ruler-fill" id="rulerFill"></div>
+    <div class="ruler-bead" id="rulerBead"></div>
+  </div>
+</div>
+<!-- ================================================================ -->
+
 <!-- INTRO SCREEN -->
 <div class="intro" id="intro">
   <div class="door left">
@@ -66,7 +92,8 @@
     <!-- Home Section -->
     <section id="home">
       <div class="left">
-        <h1>Hi, I’m Warisha Turab</h1>
+        <span class="hero-badge"><span class="hero-badge-dot"></span> Available for Freelance Projects</span>
+        <h1>Hi, I’m <span class="gradient-name">Warisha Turab</span></h1>
         <h2 id="role" class="typing"></h2>
         <button id="resume-btn">
           <a href="resume.html">View Resume</a>
@@ -76,6 +103,11 @@
       <div class="right">
         <img src="images/Beige and Brown Rusty Vintage Style Mystery Novel Book Cover  (2).png" alt="dp">
       </div>
+
+      <!-- premium scroll-down cue -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <span></span>
+      </a>
     </section>
   </div>
 
@@ -155,6 +187,17 @@
   <!-- projects -->
   <div class="projects-section" id="projects">
     <h2>My Projects</h2>
+
+    <!-- Sub-tab pills: purely visual/CSS, links to the two subsections below -->
+    <div class="project-tabs">
+      <a href="#dev-projects" class="project-tab">💻 Full Stack Development</a>
+      <a href="#design-projects" class="project-tab">🎨 Design &amp; Branding</a>
+    </div>
+
+    <!-- ============ FULL STACK DEVELOPMENT PROJECTS ============ -->
+    <h3 class="projects-subheading" id="dev-projects">
+      <span class="subheading-icon">💻</span> Full Stack Development
+    </h3>
     <div class="projects-container">
 
       <!-- Project 1 -->
@@ -260,6 +303,86 @@ A fully functional Perfume Landing Page built with React.js, Tailwind CSS & Fram
         <p>A Next.js project replicating a Figma template design to practice UI development and responsiveness.</p>
         <a href="https://warisha234.github.io/saylani-html-css-hackathon-2k25/" target="_blank" class="btn">View
           Project</a>
+      </div>
+
+    </div>
+
+    <!-- ============ DESIGN & BRANDING PROJECTS ============ -->
+    <h3 class="projects-subheading" id="design-projects">
+      <span class="subheading-icon">🎨</span> Design &amp; Branding
+    </h3>
+    <div class="projects-container design-projects-container">
+
+      <!-- Design 1 -->
+      <div class="project-card design-card">
+        <span class="design-badge">LinkedIn Banner</span>
+        <img src="images/projects-design/linkedin-banner-1.jpg" alt="SKONZS LinkedIn Banner Design">
+        <h3>Startup Brand LinkedIn Banner</h3>
+        <p>A bold, high-contrast LinkedIn banner designed for a SaaS/startup brand — built to grab attention and reinforce brand identity at first glance.</p>
+      </div>
+
+      <!-- Design 2 -->
+      <div class="project-card design-card">
+        <span class="design-badge">LinkedIn Banner</span>
+        <img src="images/projects-design/linkedin-banner-2.jpg" alt="Personal Brand LinkedIn Banner Design">
+        <h3>Personal Brand LinkedIn Banner</h3>
+        <p>A premium personal-branding LinkedIn banner combining testimonials and a clear value proposition to build instant credibility.</p>
+      </div>
+
+      <!-- Design 3 -->
+      <div class="project-card design-card">
+        <span class="design-badge">Brochure</span>
+        <img src="images/projects-design/brochure-tastyvibe.jpg" alt="Tasty Vibe Trifold Brochure Design">
+        <h3>Restaurant Trifold Brochure — Tasty Vibe</h3>
+        <p>A warm, appetizing trifold brochure layout crafted for a restaurant brand, balancing food photography with clean typography.</p>
+      </div>
+
+      <!-- Design 4 -->
+      <div class="project-card design-card">
+        <span class="design-badge">Social Media Post</span>
+        <img src="images/projects-design/social-post-perfume.jpg" alt="Luxury Perfume Social Media Post Design">
+        <h3>Luxury Perfume Promo Post</h3>
+        <p>An elegant social media post for a luxury perfume brand, using deep tones and gold accents to communicate premium positioning.</p>
+      </div>
+
+      <!-- Design 5 -->
+      <div class="project-card design-card">
+        <span class="design-badge">Business Card</span>
+        <img src="images/projects-design/business-card.jpg" alt="Sales Manager Business Card Design">
+        <h3>Sales Manager Business Card</h3>
+        <p>A sleek black &amp; green illustrative business card design, built to feel modern and memorable in a single handoff.</p>
+      </div>
+
+      <!-- Design 6 -->
+      <div class="project-card design-card">
+        <span class="design-badge">Brand Identity</span>
+        <img src="images/projects-design/nexatech-logo.jpg" alt="Nexa Tech Brand Identity Design">
+        <h3>Nexa Tech — Brand Identity</h3>
+        <p>Complete brand identity design for Nexa Tech, including logo, colour system, and business card — built for a next-gen tech company feel.</p>
+      </div>
+
+      <!-- Design 7 -->
+      <div class="project-card design-card">
+        <span class="design-badge">LinkedIn Carousel</span>
+        <img src="images/projects-design/carousel-skonzs.jpg" alt="SKONZS LinkedIn Carousel Design">
+        <h3>Startup Growth — LinkedIn Carousel</h3>
+        <p>A 7-slide educational carousel built with strong hooks and a clear narrative arc — designed to stop the scroll and drive saves/shares.</p>
+      </div>
+
+      <!-- Design 8 -->
+      <div class="project-card design-card">
+        <span class="design-badge">LinkedIn Carousel</span>
+        <img src="images/projects-design/carousel-branding.jpg" alt="Personal Branding LinkedIn Carousel Design">
+        <h3>Personal Branding Carousel</h3>
+        <p>A storytelling carousel for personal branding content — moody visuals paired with authentic captions to boost engagement.</p>
+      </div>
+
+      <!-- Design 9 -->
+      <div class="project-card design-card">
+        <span class="design-badge">Merch Mockup</span>
+        <img src="images/projects-design/nelas-merch.jpg" alt="Nelas Brand Merchandise Mockup Design">
+        <h3>Brand Merchandise Mockup — Nelas</h3>
+        <p>Product mockup design applying the Nelas logo across mugs, apparel, and stationery for a cohesive brand merch line.</p>
       </div>
 
     </div>
@@ -501,7 +624,36 @@ A fully functional Perfume Landing Page built with React.js, Tailwind CSS & Fram
   </footer>
 
   <script src="script.js"></script>
-  
+
+  <!-- Scroll Progress Ruler logic — kept separate from script.js on purpose,
+       so nothing in the existing file is touched. -->
+  <script>
+    (function () {
+      var bead = document.getElementById('rulerBead');
+      var fill = document.getElementById('rulerFill');
+      var track = document.querySelector('.scroll-ruler .ruler-track');
+      if (!bead || !fill || !track) return;
+
+      function updateRuler() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var progress = docHeight > 0 ? scrollTop / docHeight : 0;
+        if (progress < 0) progress = 0;
+        if (progress > 1) progress = 1;
+
+        var trackHeight = track.clientHeight;
+        var pos = progress * trackHeight;
+
+        bead.style.top = pos + 'px';
+        fill.style.height = pos + 'px';
+      }
+
+      window.addEventListener('scroll', updateRuler, { passive: true });
+      window.addEventListener('resize', updateRuler);
+      updateRuler();
+    })();
+  </script>
+
 </body>
 
 </html>
